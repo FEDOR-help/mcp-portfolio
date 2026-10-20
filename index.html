@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Production portfolio of 7 custom MCP servers and AI operations built by Alexander — Python engineer working with LLM automation, MCP SDK, Docker and GitHub Pages.">
+<title>Alexander — MCP Servers Portfolio</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1f2b;
+    --muted: #5b6472;
+    --card: #f6f8fa;
+    --border: #e2e8f0;
+    --accent: #0b57d0;
+    --chip: #e8eef7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--fg); line-height: 1.55;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 64px; }
+  header h1 { font-size: 2rem; letter-spacing: -0.02em; }
+  header .role { color: var(--accent); font-weight: 600; margin-top: 4px; }
+  header p.intro { color: var(--muted); margin-top: 14px; max-width: 720px; }
+  header a { color: var(--accent); text-decoration: none; }
+  header a:hover { text-decoration: underline; }
+  h2 { font-size: 1.15rem; margin: 44px 0 16px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 18px 16px;
+  }
+  .card h3 { font-size: 1.02rem; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; color: var(--accent); }
+  .card .tag { font-size: 0.78rem; color: var(--muted); margin: 2px 0 10px; }
+  .card ul { padding-left: 18px; }
+  .card li { font-size: 0.88rem; margin-bottom: 4px; }
+  .chips { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 0.72rem; background: var(--chip); color: var(--fg);
+    border-radius: 999px; padding: 2px 10px; font-family: ui-monospace, Consolas, monospace;
+  }
+  .ops { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; }
+  .ops ul { padding-left: 18px; }
+  .ops li { margin-bottom: 6px; font-size: 0.92rem; }
+  footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Alexander</h1>
+  <div class="role">Python Engineer — AI Automation &amp; MCP Servers</div>
+  <p class="intro">
+    I build production AI automation: <strong>7 custom MCP servers</strong> that connect LLMs to documents,
+    images, search, scraping, multi-channel publishing and a content pipeline — plus a self-healing
+    ops layer (scheduled tasks, monitoring, model failover, Telegram alerts).
+    All servers run locally over <code>stdio</code> with the official <strong>Python MCP SDK</strong>.
+    <br><br>
+    GitHub: <a href="https://github.com/fedor-help">github.com/fedor-help</a>
+  </p>
+</header>
+
+<h2>MCP Servers</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3>docx-mcp</h3>
+    <div class="tag">Document generation at scale</div>
+    <ul>
+      <li>Generates complete vocational-training document kits — 6 DOCX per program (syllabus, manuals, tests, competency maps)</li>
+      <li>Template filling, OOXML unpack/pack/validate, page setup</li>
+      <li>Russian typography validator (orthography &amp; style rules)</li>
+      <li>Kit invariant validation against a reference standard</li>
+    </ul>
+    <div class="chips"><span class="chip">python-docx</span><span class="chip">OOXML</span><span class="chip">MCP SDK</span></div>
+  </div>
+
+  <div class="card">
+    <h3>images-mcp</h3>
+    <div class="tag">Image generation &amp; processing</div>
+    <ul>
+      <li>Free inference via HuggingFace Inference Providers (FLUX.1, SD3.5, Hyper-SD)</li>
+      <li>Browser-driven Gemini (nano-banana) through patchright automation</li>
+      <li>Batch enhance/enrich: upscale, sharpen, denoise, contact sheets, series rename</li>
+    </ul>
+    <div class="chips"><span class="chip">Pillow</span><span class="chip">patchright</span><span class="chip">huggingface_hub</span></div>
+  </div>
+
+  <div class="card">
+    <h3>searxng-mcp</h3>
+    <div class="tag">Self-hosted meta-search</div>
+    <ul>
+      <li>SearXNG in Docker (Google/Bing/DDG meta-search) exposed as MCP tools</li>
+      <li>Web + news search with zero API keys</li>
+      <li>Works around regional blocks; fully self-hosted</li>
+    </ul>
+    <div class="chips"><span class="chip">Docker</span><span class="chip">SearXNG</span><span class="chip">REST</span></div>
+  </div>
+
+  <div class="card">
+    <h3>crawl4ai-mcp</h3>
+    <div class="tag">Web scraping to Markdown</div>
+    <ul>
+      <li>Crawl4AI (Playwright rendering) as MCP tools — handles JS-heavy pages</li>
+      <li>Async job queue: submit URLs, poll status, get clean Markdown</li>
+      <li>Single-page and batch (up to N URLs) crawling</li>
+    </ul>
+    <div class="chips"><span class="chip">Crawl4AI</span><span class="chip">Playwright</span><span class="chip">Docker</span></div>
+  </div>
+
+  <div class="card">
+    <h3>keyboard-layout-mcp</h3>
+    <div class="tag">Keyboard layout utilities</div>
+    <ul>
+      <li>Detect &amp; convert between QWERTY, ЙЦУКЕН, QWERTZ, AZERTY</li>
+      <li>Auto-fix mixed-layout text (frequency-based scoring)</li>
+      <li>T9 predictive input for en/ru</li>
+    </ul>
+    <div class="chips"><span class="chip">pure Python</span><span class="chip">stdlib</span></div>
+  </div>
+
+  <div class="card">
+    <h3>contentfactory-mcp</h3>
+    <div class="tag">Multi-channel content factory</div>
+    <ul>
+      <li>AI post generation with grammar control</li>
+      <li>Publish to Telegram, VK, MAX and a GitHub Pages site in one cycle</li>
+      <li>Full orchestration: generate → check → publish → deploy</li>
+    </ul>
+    <div class="chips"><span class="chip">Telethon</span><span class="chip">GitHub Pages</span><span class="chip">MCP SDK</span></div>
+  </div>
+
+  <div class="card">
+    <h3>program-writing-mcp</h3>
+    <div class="tag">Knowledge base &amp; build pipeline</div>
+    <ul>
+      <li>Registry + full-text corpus search over generated document kits</li>
+      <li>Pipeline: create program → inject data blocks → build 6 DOCX → archive</li>
+      <li>AST-based data injection into Python generators</li>
+    </ul>
+    <div class="chips"><span class="chip">SQLite</span><span class="chip">ast</span><span class="chip">docx2txt</span></div>
+  </div>
+
+</div>
+
+<h2>AI Operations</h2>
+<div class="ops">
+  <ul>
+    <li><strong>Self-healing daemon</strong> — 12 scheduled tasks (Python + PowerShell 7), supervisor service via nssm, auto-recovery of tasks and UI window.</li>
+    <li><strong>Model failover</strong> — automatic switching of LLM providers when quotas exhaust, with scheduled revert; usage analytics driving the risk model.</li>
+    <li><strong>Monitoring &amp; alerts</strong> — service probes every 30 minutes with Telegram notifications; incident status updates until resolved, then retrospective.</li>
+    <li><strong>Automated backups</strong> — daily/weekly file backups plus cold-copy SQLite DB backups with integrity checks and rotation.</li>
+  </ul>
+</div>
+
+<footer>
+  Built as a work sample. Servers are described at the architecture level; no proprietary code or keys are shown.<br>
+  Contact: <a href="https://github.com/fedor-help">github.com/fedor-help</a>
+</footer>
+
+</div>
+</body>
+</html>
